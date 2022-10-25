@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Mentorias-TDD.iml" filepath="$PROJECT_DIR$/Mentorias-TDD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tdd_mentoring.iml" filepath="$PROJECT_DIR$/tdd_mentoring.iml" />
     </modules>
   </component>
 </project>
