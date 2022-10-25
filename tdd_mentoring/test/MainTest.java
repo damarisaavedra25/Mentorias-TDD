@@ -50,32 +50,68 @@ public class MainTest {
     public void testPorcentaje() {
 
         Calculadora miCalculadora = new Calculadora();
-        int resultado = miCalculadora.porcentaje(10,1);
-        Assert.assertNotEquals(1000,resultado);
+        int resultado = miCalculadora.porcentaje(10, 1);
+        Assert.assertNotEquals(1000, resultado);
+    }
+    //Mentorias //1 suma con numeros negativos
+    @Test
+    public void testSumanegativa() {
+        Calculadora miCalculadora = new Calculadora();
+        int resultado = miCalculadora.sumanegativa(-10, -10);
+        Assert.assertEquals(-20, resultado);
+    }
+
+    //Mentorias //2 suma con numeros
+    @Test
+    public void testSumaFlotantes() {
+        Calculadora miCalculadora = new Calculadora();
+        float resultado = miCalculadora.sumaflotantes(10.20f, 10.80f);
+        Assert.assertEquals(21, resultado, 0);
+    }
+
+
+    //Mentorias //2 suma con dobles
+    @Test
+    public void testSumaDobles() {
+        Calculadora miCalculadora = new Calculadora();
+        double resultado = miCalculadora.sumaDobles(10.5, 10.5);
+        Assert.assertEquals(11, resultado, 0);
+    }
+
+    //Mentorias //2 suma con numeros
+    @Test
+    public void testSumaGigantes() {
+        Calculadora miCalculadora = new Calculadora();
+        long resultado = miCalculadora.sumaGigantes(2000000, 1000000);
+        Assert.assertEquals(3000000, resultado, 0);
+    }
+
+    @Test
+    public void testMayoraDiez(){
+        Calculadora miCalculadora = new Calculadora();
+        boolean resultado = miCalculadora.esMayoraDiez(24);
+
+        Assert.assertTrue(resultado);
+    }
+
+    @Test
+    public void testDescripcion() {
+        Nota miNota = new Nota();
+        String respuesta = miNota.IsEmpty("esto es una prueba");
+
+        Assert.assertNotNull(respuesta);
+    }
+
+    //unit testing c/ arreglos
+    @Test
+    public void arrayAreEquals(){
+        Calculadora miCalculadora = new Calculadora();
+
+        Assert.assertArrayEquals(miCalculadora.expectedOutput, miCalculadora.methodOutput);
+    }
+    @Test
+    public void dosMasDosIgualCuatro(){
+        Calculadora miCalculadora = new Calculadora();
+        Assert.assertTrue(miCalculadora.add(2, 2) == 4);
     }
 }
-//    }
-//    @Test
-//  public void testOperaction(){
-//
-//        Calculadora miCalculadora = new Calculadora();
-////        Scanner myInput= new Scanner(System.in);
-//
-////        System.out.println("Inserta el primer numero");
-////        int numero1 = myInput.nextInt();
-////        miCalculadora.insertaPrimerNumero(numero1);
-////        System.out.println("Inserta el segundo numero");
-////        int numero2 = myInput.nextInt();
-////
-////        System.out.print();
-//
-//
-//
-//        miCalculadora.capturaNumeros();
-//        Assert.assertNotNull(miCalculadora.numero1);
-//        Assert.assertNotNull(miCalculadora.numero2);
-////        miCalculadora.ejeutaOperaction("-", 2);
-////
-//        Assert.assertEquals(-1,2);
-//    }
-//}

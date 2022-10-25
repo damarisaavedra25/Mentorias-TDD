@@ -2,8 +2,13 @@ import java.util.Scanner;
 
 //TDD - Test Driven Development
 class Calculadora {
+    //propiedades
     int numero1, numero2;
+    public int[] expectedOutput = {1, 2, 3};
+    public int[] methodOutput = {1, 2, 3};
 
+
+    //metodos
     public int suma(int x, int y) {
         return x + y;
     }
@@ -23,20 +28,38 @@ class Calculadora {
     public int multiplicacion(int x, int y) {
         return x * y;
     }
-    public int porcentaje(int x, int y) { return x / y *100;}
+
+    public int porcentaje(int x, int y) {
+        return x / y * 100;
+    }
+
+    public int sumanegativa(int x, int y) {
+        return x + y;
+    }
+
+    public float sumaflotantes(float x, float y) {
+        return x + y;
+    }
+
+
+    public double sumaDobles(double x, double y) {
+        return x + y;
+    }
+
+
+    public long sumaGigantes(long x, long y) {
+        return x + y;
+    }
+
+    public boolean esMayoraDiez(int numero) {
+        if (numero > 10) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public int add (int numberA, int numberB){
+        return numberA + numberB;
+    }
 }
-//    public int multiplicacion(int x, int y) {
-//        return x * y;
-//    }
-//    public void capturaNumeros(){
-//        Scanner myInput= new Scanner(System.in);
-//        System.out.println("Inserta el primer numero");
-//        numero1 = myInput.nextInt();
-//        System.out.println("Inserta el segundo numero");
-//        numero2 = myInput.nextInt();
-//
-//        System.out.print(" Si se suma un número mayor que cero y un número menor que cero: se restan y se deja el signo del número con mayor valor absoluto");
-//    }
-//
-//    public void ejeutaOperaction(String s, int i) {
-//    }
